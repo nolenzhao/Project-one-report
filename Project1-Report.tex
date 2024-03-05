@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}       % For including images
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{amssymb}
+
+\begin{document}
+
+\raggedright
+    \begin{titlepage}
+        \centering
+        \huge{\textbf{MTE 322 Project One Report}}
+
+        \vspace{15mm}
+        \Large{\textbf{Angle Grinder Power Tool}}
+
+        \vspace{15mm}
+        \Large{\textbf{Prepared By:}}
+        
+        \Large{Nolen Zhao}
+
+        \Large{20932971}
+
+    \end{titlepage}
+
+    \section{Introduction}
+
+    \section{Assumptions}
+        The following solutions are under the assumption that the $F_{xz}$ is the maximum force that the angle grinder 
+        can output. If an external force equal to and opposite of $F_{xz}$ is applied at the contact point, 
+        then the angle grinder will not be able to spin. It is also assumed that the force $F_{y}$ is the normal 
+        force on the angle grinder applied by the user.
+    
+    \section{Question One}
+        The general expressions for all contact forces of the gears and bearings is found with respect to $\beta$, as 
+        that is the only variable present. The value of $\beta$ will affect the output torque, and propagates through the calculations 
+        for forces. This will be shown below. 
+        \bigskip
+
+        First, the output torque as a function of $\beta$ is found. The distance from the contact point to the centre of the 
+        shaft is given to be $\frac{4r}{5}$ where \emph{r} is the radius. The \emph{z} component of force, perpendicular to 
+        the distance from the radius, can be represented below in Equation \ref{eq:perp-fxz}. 
+
+        \begin{equation}
+            F_{xz} \cdot \cos(\beta)
+        \label{eq:perp-fxz}
+        \end{equation}
+
+        $F_{xz}$ is given as $30N$, so the force at the contact point is $30N \cdot \cos(\beta)$. Thus, the torque can be found below in Equation \ref{eq:output-torque} where the 
+        radius was given in the SolidWorks assembly as $55mm$.
+
+        \begin{equation}
+            \tau = F_{xz}\cos(\beta) \cdot \frac{4r}{5} = 30N \cdot \cos(\beta) \cdot \frac{4 \cdot 0.055m}{5} = 1.32 \cdot \cos(\beta)Nm
+        \label{eq:output-torque}
+        \end{equation}
+
+        The rotational velocity is given as $n = 2550rpm$, and should be converted into units of $rad/s$ for calculations. The conversion is 
+        shown below in Equation \ref{eq:rpm-conversion}
+
+        \begin{equation}
+            \omega = n\cdot \frac{2 \pi rad}{1 rev} \cdot \frac{1min}{60s} \rightarrow 2550rpm \cdot \frac{2 \pi rad}{1 rev} \cdot \frac{1min}{60s} = 267.035rad/s
+        \label{eq:rpm-conversion}
+        \end{equation}
+
+        The equation for power and ensuing output power is found below in Equation \ref{eq:output-power}
+
+        \begin{equation}
+           \mathbb{P} = \omega \cdot \tau \rightarrow \mathbb{P}_{output} = 267.035rad/s \cdot 1.32 \cdot \cos(\beta)Nm = 
+        \label{eq:output-power}
+        \end{equation}
+    \section{Question Two}
+\end{document}
